@@ -1,4 +1,11 @@
 extends layout
 
 block content
-  h1= title
+  h1= header
+  form(action="/new", method="POST")
+    label(for="userName") UserName 
+    input(type="text", name="userName")
+    label(for="messageText") Message text 
+    input(type="text", name="messageText")
+    input(type="submit", value="Save Message")
+  a(href='/') Home
