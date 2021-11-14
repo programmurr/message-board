@@ -4,7 +4,7 @@ block content
   h1= header
   each message in messages 
     .message-container 
-      p.message-title= message.text
-      p.message-user= message.user
-      p.message-added= message.added
+      p.message-title #{message.text}
+      p.message-user <b>#{message.user}</b>
+      p.message-added #{message.added}
   a(href='/new') New Message
